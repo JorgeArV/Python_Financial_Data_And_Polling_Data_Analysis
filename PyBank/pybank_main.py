@@ -7,7 +7,7 @@ filepath = os.path.join("PyBank", "PyBank_Resources", "budget_data.csv")
 #Lists created / tickers used:
 Months = [] #List comprising all months (i.e. values under 'Date' column)
 ProfitsorLosses = [] #List comprising all values under 'Profit/Losses' column
-Changes_PandL = [] #List comprising the changes in profit/losses from one month to the other
+Changes_PandL = [] #List comprising the changes in profit/losses from one month to the other (i.e. Changes_Profits and Losses)
 
 # Read in the CSV file
 with open(filepath, 'r') as csvfile:
@@ -39,17 +39,18 @@ with open(filepath, 'r') as csvfile:
 
     #RESPONSES TO THIS EXERCISE
     #Total months in dataset
-    TotalMonths = f"Total Months: {len(Months)}"
+    TotalMonths = f"Total Months: {len(Months)}" #Total months in dataset = Number of items in the 'Months' list. We write a string with the exact wording & format requested in the instructions
     #net total amount of Profits/Losses
-    Total = f"Total: ${sum(ProfitsorLosses)}"
+    Total = f"Total: ${sum(ProfitsorLosses)}" # Net amount of Profits/Losses = Adding all items in the 'ProfitsorLosses' list. We write a string with the exact wording & format requested in the instructions
     #Average of changes in Profits/Losses
-    AverageChange = f"Average Change: ${round(sum(Changes_PandL) / len(Changes_PandL),2)}"
+    AverageChange = f"Average Change: ${round(sum(Changes_PandL) / len(Changes_PandL),2)}" #We sum all the value of all the  items in the 'Changes_PandL' list and divide it by the number of items to find the average. We write a string with the exact wording & format requested in the instructions
     #Greatest increase in Profits
-    GreatestInc = f"Greatest Increase in Profits: {GreatestIncDate} (${max(Changes_PandL)})"
+    GreatestInc = f"Greatest Increase in Profits: {GreatestIncDate} (${max(Changes_PandL)})" #We write a string including the date and greatest increase in Profits as requested in the instructions.
     #Greatest decrease in Losses
-    GreatestDec = f"Greatest Decrease in Profits: {GreatestDecDate} (${min(Changes_PandL)})"    
+    GreatestDec = f"Greatest Decrease in Profits: {GreatestDecDate} (${min(Changes_PandL)})" #We write a string including the date and greatest decrease in Losses as requested in the instructions.   
     #Final Answer
     PyBankAnswer = "Financial Analysis" + "\n" + "----------------------------" + "\n" + TotalMonths + "\n" + Total + "\n" + AverageChange + "\n" + GreatestInc + "\n" + GreatestDec
+    #We add all the strings to generate the exact text requested as the answer.
     print(PyBankAnswer)
 
 #We create a text file, and save it under the PyBank folder:
@@ -59,11 +60,3 @@ os.makedirs(os.path.dirname(filename), exist_ok=True)
 with open(filename,"w") as datafile:
     writer = csv.writer(datafile)
     datafile.write(PyBankAnswer)
-    
-#Creating a text file:
-#filename = "PyBank/PyBankAnwer.txt"
-#os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-#with open(filename,"w") as datafile:
-#    writer = csv.writer(datafile)
-#    datafile.write(Statement)
