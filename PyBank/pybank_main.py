@@ -43,7 +43,7 @@ with open(filepath, 'r') as csvfile:
     #net total amount of Profits/Losses
     Total = f"Total: ${sum(ProfitsorLosses)}" # Net amount of Profits/Losses = Adding all items in the 'ProfitsorLosses' list. We write a string with the exact wording & format requested in the instructions
     #Average of changes in Profits/Losses
-    AverageChange = f"Average Change: ${round(sum(Changes_PandL) / len(Changes_PandL),2)}" #We sum all the value of all the  items in the 'Changes_PandL' list and divide it by the number of items to find the average. We write a string with the exact wording & format requested in the instructions
+    AverageChange = f"Average Change: ${round(sum(Changes_PandL) / len(Changes_PandL),2)}" #We sum the values of all the items in the 'Changes_PandL' list and divide this figure by the number of items to find the average. We write a string with the exact wording & format requested in the instructions
     #Greatest increase in Profits
     GreatestInc = f"Greatest Increase in Profits: {GreatestIncDate} (${max(Changes_PandL)})" #We write a string including the date and greatest increase in Profits as requested in the instructions.
     #Greatest decrease in Losses
