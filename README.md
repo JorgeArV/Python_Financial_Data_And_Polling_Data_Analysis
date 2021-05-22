@@ -1,5 +1,6 @@
 ## Financial Data Analysis (PyBank)
 
+![Screenshot](Images/Screenshot.jpg)
 I have created a python script that analyzes financial data records to calculate the following: 
 
   * The total number of months included in the dataset.
