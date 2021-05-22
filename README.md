@@ -18,6 +18,8 @@ I have created a python script that analyzes financial data records to calculate
 
 ## Polling Data Analysis (PyPoll)
 
+![Screenshot](Images/Screenshot2.JPG)
+
 I have created a python script that analyses votes in a polling data set to calculate the following:
 
   * The total number of votes cast.
