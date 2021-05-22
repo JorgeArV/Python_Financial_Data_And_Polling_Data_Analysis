@@ -1,6 +1,6 @@
 ## Financial Data Analysis (PyBank)
 
-![Screenshot](Images/Screenshot.jpg)
+![Screenshot](Images/Screenshot.JPG)
 
 ![stock Market](Images/stockmarket.jpg)
 
