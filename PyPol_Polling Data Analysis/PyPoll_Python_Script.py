@@ -2,7 +2,7 @@ import os
 import csv
 
 # Path to collect data from the PayPoll_Resources folder
-filepath = os.path.join("PyPoll", "PyPoll_Resources", "election_data.csv")
+filepath = os.path.join("Resources", "election_data.csv")
 
 #Lists created / tickers used:
 Votes= [] #List comprising all votes

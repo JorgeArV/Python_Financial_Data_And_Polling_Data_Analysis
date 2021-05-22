@@ -2,7 +2,7 @@ import os
 import csv
 
 # Path to collect data from the PayPoll_Resources folder
-filepath = os.path.join("PyBank", "PyBank_Resources", "budget_data.csv")
+filepath = os.path.join("Resources", "budget_data.csv")
 
 #Lists created / tickers used:
 Months = [] #List comprising all months (i.e. values under 'Date' column)
